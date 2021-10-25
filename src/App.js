@@ -9,6 +9,8 @@ import Services from "./Pages/Home/Services/Services";
 import Experts from "./Pages/Home/Experts/Experts";
 import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import AddService from "./Pages/AddService/AddService";
+import ManageServices from "./Pages/ManageServices/ManageServices";
 
 function App() {
   return (
@@ -31,6 +33,12 @@ function App() {
             </Route>
             <Route path="/experts">
               <Experts></Experts>
+            </Route>
+            <Route path="/addService">
+              <AddService></AddService>
+            </Route>
+            <Route path="/manageServices">
+              <ManageServices></ManageServices>
             </Route>
             <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>

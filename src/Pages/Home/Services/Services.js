@@ -5,9 +5,7 @@ import "./Services.css";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/Tahmid-islam/genius-car-mechanics/main/public/services.json"
-    )
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
