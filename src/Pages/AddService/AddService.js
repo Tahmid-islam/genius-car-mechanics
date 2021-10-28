@@ -7,12 +7,14 @@ const AddService = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/services", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Added successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://mighty-peak-26119.herokuapp.com/services", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Added successfully");
+          reset();
+        }
+      });
   };
 
   return (
